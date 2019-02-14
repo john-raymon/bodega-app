@@ -31,7 +31,12 @@ class LandingScreen extends Component {
             <Text style={[s.bodyTextLight, s.whiteWash, s.tc, s.pv1]}>
               GET IT DELIVERED
             </Text>
-            <ClearButton />
+            <ClearButton
+              onPress={() => {
+                this.props.navigation.navigate('Main')
+              }}
+              text="VIEW BODEGAS NEAR ME"
+            />
           </View>
         </View>
       </View>
