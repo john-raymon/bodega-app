@@ -57,43 +57,51 @@ class App extends Component<Props> {
   }
 }
 
-const AppNavigator = createStackNavigator({
+const AppNavigator = createStackNavigator(
+  {
     Home: App
   },
   {
     headerMode: 'none'
-  });
-
+  }
+);
 
 NativeTachyons.build({
-    colors: {
-        palette: {
-           brandGray: "#2F2F2F"
-        }
-     }
-  },
-  { // patched create method for StyleSheet param for NativeTachyons.build method
-    create: (tachyonsDraftStylesheet) => {
-      let s = tachyonsDraftStylesheet
-      // util styles
-      const utils = {
-          w100: {
-            width: "100%"
-          }
-        }
-      // global styles
-      const globals = {
-        container: StyleSheet.flatten([s.flx_i, s.jcc, s.bg_brandGray, utils.w100]),
-        image: StyleSheet.flatten([s.flx_i, utils.w100])
-      }
-      const patchedDraftedStylesheet = {
-          ...utils,
-          ...globals,
-          ...s
-        }
-      return StyleSheet.create(patchedDraftedStylesheet)
+  colors: {
+    palette: {
+      brandGray: "#2F2F2F"
     }
-  });
+  },
+  fonts: {
+    robotoSlabLight: 'RobotoSlab-Light'
+  }
+},
+{ // patched create method for StyleSheet param for NativeTachyons.build method
+  create: (tachyonsDraftStylesheet) => {
+    let s = tachyonsDraftStylesheet
+    // util styles
+    const utils = {
+        w100: {
+          width: "100%"
+        }
+      }
+    // global styles
+    const globals = {
+      container: StyleSheet.flatten([s.flx_i, s.jcc, s.bg_brandGray, utils.w100]),
+      image: StyleSheet.flatten([s.flx_i, utils.w100])
+    }
+    // typography
+    const typography = {
+      bodyText: StyleSheet.fśatten([{ff_robotoSlabLight}])
+    }
+    const patchedDraftedStylesheet = {
+        ...utils,
+        ...globals,
+        ...s
+      }
+    return StyleSheet.create(patchedDraftedStylesheet)
+  }
+});
 
 
 // const waitForS = new Promise((resolve, reject) => {
