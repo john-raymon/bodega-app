@@ -4655,10 +4655,9 @@ react-native-safe-area-view@^0.12.0:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
   integrity sha512-kSyAt0AeVU6N7ZonfV6dP6iZF8B7Bce+tk3eujXhzBGsLg0VSLnU7uE9VqJF0xdQrHR91ZjGgVMieo/8df9KTA==
 
-react-native-style-tachyons@^4.0.0:
+"react-native-style-tachyons@https://github.com/john-raymon/react-native-style-tachyons.git":
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-style-tachyons/-/react-native-style-tachyons-4.0.0.tgz#279679b9ad310cfa62646681d43271af09a5e0a2"
-  integrity sha512-isuDpwD5MfQQOTvC8ckIar7WiZNtqwXOhj1TrTPYezCZnFrUQdJ5o96sXppQg8H3EPvMPl2vR+0tXTkdg0QrrA==
+  resolved "https://github.com/john-raymon/react-native-style-tachyons.git#de1ed2e0e6153bb246ac5bacdd9d0629e7ece68f"
   dependencies:
     color "^3.0.0"
     css-color-names "0.0.4"

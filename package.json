@@ -10,7 +10,7 @@
     "react": "16.6.3",
     "react-native": "0.58.4",
     "react-native-gesture-handler": "^1.0.15",
-    "react-native-style-tachyons": "^4.0.0",
+    "react-native-style-tachyons": "https://github.com/john-raymon/react-native-style-tachyons.git",
     "react-native-vector-icons": "^6.2.0",
     "react-navigation": "^3.2.1"
   },
