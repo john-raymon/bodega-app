@@ -33,11 +33,17 @@ NativeTachyons.build({
         max_w5_5: {
           maxWidth: 300
         },
+        h3_5: {
+          height: 86
+        },
         h5_5: {
           height: 300
         },
         f7: {
           fontSize: 12
+        },
+        f8: {
+          fontSize: 10
         },
         jcfs: {
           justifyContent: "flex-start"

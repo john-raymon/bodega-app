@@ -50,16 +50,21 @@ const MainStack = createBottomTabNavigator({
     Dashboard: DashboardStack
   },
   {
-  defaultNavigationOptions: ({ navigation }) => ({
-    tabBarIcon: ({ focused, horizontal, tintColor }) => {
+  tabBarComponent: ({ navigation }) => {
       const { routeName } = navigation.state;
       console.log('current route name!', routeName)
-      return <View style={[s.bg_brandGray, s.w100, s.h100]} />
-    }
-  }),
+      return (
+        <View style={[s.bg_brandGray, s.w100, s.relative, s.h3_5]}>
+          <SafeAreaView style={[s.flx_row, s.h100, s.w100, s.jcsb, s.ph4, s.aic]}>
+            <Text style={[s.bodyText, s.whiteWash, s.f8]}>
+              GET SUPPORT
+            </Text>
+          </SafeAreaView>
+        </View>
+      )
+  },
   tabBarOptions: {
-    showLabel: false,
-    safeAreaInset: { bottom: 'never' }
+    showLabel: false
   }
 })
 
