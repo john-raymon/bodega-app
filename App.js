@@ -55,7 +55,7 @@ const MainStack = createBottomTabNavigator({
       console.log('current route name!', routeName)
       return (
         <View style={[s.bg_brandGray, s.w100, s.relative, s.h3_5]}>
-          <SafeAreaView style={[s.flx_row, s.h100, s.w100, s.jcsb, s.ph4, s.aic]}>
+          <SafeAreaView style={[s.flx_row, s.h100, s.w100, s.jcsb, s.ph4, s.aic, s.pt2]}>
             <Text style={[s.bodyText, s.whiteWash, s.f8]}>
               GET SUPPORT
             </Text>

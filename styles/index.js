@@ -34,7 +34,7 @@ NativeTachyons.build({
           maxWidth: 300
         },
         h3_5: {
-          height: 86
+          height: 90
         },
         h5_5: {
           height: 300
@@ -50,6 +50,12 @@ NativeTachyons.build({
         },
         overflowHidden: {
           overflow: "hidden"
+        },
+        shadow: {
+          shadowOpacity: 0.80,
+          shadowRadius: 18,
+          shadowColor: 'black',
+          shadowOffset: { height: 5, width: 5 }
         }
       }
 
