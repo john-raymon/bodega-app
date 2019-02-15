@@ -10,7 +10,8 @@ NativeTachyons.build({
   },
   fonts: {
     robotoSlabLight: 'RobotoSlab-Light',
-    robotoSlabThin: 'RobotoSlab-Thin'
+    robotoSlabThin: 'RobotoSlab-Thin',
+    robotoSlabBold: 'RobotoSlab-Bold'
   }
 },
 { // patched create method for StyleSheet param for NativeTachyons.build method
@@ -21,6 +22,9 @@ NativeTachyons.build({
     const utils = {
         w100: {
           width: "100%"
+        },
+        h100: {
+          height: "100%"
         },
         f7: {
           fontSize: 12
@@ -37,7 +41,8 @@ NativeTachyons.build({
     // typography
     const typography = {
       bodyText: StyleSheet.flatten([s.ff_robotoSlabThin, utils.f7, s.tracked_mega, s.lh_solid]),
-      bodyTextLight: StyleSheet.flatten([s.ff_robotoSlabLight, utils.f7, s.tracked_mega])
+      bodyTextLight: StyleSheet.flatten([s.ff_robotoSlabLight, utils.f7, s.tracked_mega]),
+      bodyTextBold: StyleSheet.flatten([s.ff_robotoSlabBold, utils.f7, s.tracked_mega]),
     }
 
     const patchedDraftedStylesheet = {

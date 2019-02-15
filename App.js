@@ -28,9 +28,7 @@ const LandingStack = createStackNavigator(
 );
 
 const MainStack = createStackNavigator({
-    Dashboard: {
-      screen: DashboardScreen
-    }
+    Dashboard: DashboardScreen
   },
   {
     defaultNavigationOptions: {
@@ -61,9 +59,15 @@ const AppContainer = createAppContainer(createSwitchNavigator(
 
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      validBubble: false
+    }
+  }
   render() {
     return (
-      <AppContainer />
+      <AppContainer screenProps={this.state}/>
     );
   }
 }
