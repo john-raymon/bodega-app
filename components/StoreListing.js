@@ -23,8 +23,8 @@ class StoreListing extends Component {
           <ImageBackground
             source={require('./../images/stock_photo.jpg')}
             style={[s.br4, s.w5, s.h5, s.jcc, s.aic, s.mv3, s.overflowHidden]} >
-              <View style={[s.absolute_fill, s.bg_black, s.o_80]}/>
-              <Text style={[s.bodyTextLight, s.whiteWash, s.ph3, s.tl, s.f5]}>
+              <View style={[s.absolute_fill, s.bg_black, s.o_70]}/>
+              <Text style={[s.bodyTextLight, s.whiteWash, s.ph3, s.tl, s.f6]}>
                 Sorry, there
                 aren’t any participating
                 stores near

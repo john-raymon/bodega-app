@@ -59,7 +59,7 @@ NativeTachyons.build({
         },
         shadow2: {
           shadowOpacity: 0.20,
-          shadowRadius: 17,
+          shadowRadius: 15,
           shadowColor: 'black',
           shadowOffset: { height: 0, width: 2 }
         }

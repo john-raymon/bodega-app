@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Platform, StyleSheet, Text, View, Image, ImageBackground, Button, Alert, TouchableOpacity, SafeAreaView} from 'react-native';
+import {Platform, StyleSheet, Text, View, Image,FlatList, ImageBackground, Button, Alert, TouchableOpacity, SafeAreaView} from 'react-native';
 import s from "./../styles";
 
 class OrderDashboardWidget extends Component {
@@ -9,7 +9,7 @@ class OrderDashboardWidget extends Component {
   }
   render(){
     return(
-      <View style={[s.shadow2, s.w100, s.aic]}>
+      <View style={[s.shadow2, s.w100, s.aic, s.mt0]}>
         <View
           style={[{width: "85%"}, s.bg_whiteWash, s.br4, s.overflowHidden, s.mv2]}>
           <View style={[s.w100, s.flx_row, s.jcsb, s.aic, s.mv3, s.ph4, s.pt2]}>
@@ -20,8 +20,23 @@ class OrderDashboardWidget extends Component {
               TOTAL : $ ----
             </Text>
           </View>
+          <View style={[s.w100, s.h4]}>
+            <FlatList
+              data={[
+                {storeName: 'Devin'},
+                {storeName: 'Jackson'},
+                {storeName: 'James'},
+                {storeName: 'Joel'},
+                {storeName: 'John'},
+                {storeName: 'Jillian'},
+                {storeName: 'Jimmy'},
+                {storeName: 'Julie'},
+              ]}
+              renderItem={({item}) => <Text style={[s.w100, s.pv2]}>{item.storeName}</Text>}
+            />
+          </View>
           <View style={[s.w100, s.bg_brandGray, s.asfe, s.pv3, s.jcc]}>
-            <Text style={[s.bodyTextBold, s.f8, s.whiteWash, s.tc]}>
+            <Text style={[s.bodyTextBold, s.f8, s.whiteWash, s.tc, s.pv2, s.tracked_mega]}>
               CHECKOUT
             </Text>
           </View>
