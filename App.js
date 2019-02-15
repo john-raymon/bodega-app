@@ -12,7 +12,10 @@ import {Platform, StyleSheet, Text, View, Image, Button, Alert } from 'react-nat
 import { createSwitchNavigator, createStackNavigator, createAppContainer, SafeAreaView } from "react-navigation";
 
 import ClearButton from './components/ClearButton'
+import MainHeader from './components/MainHeader'
 import LandingScreen from './components/LandingScreen'
+import DashboardScreen from './components/DashboardScreen'
+
 import s from "./styles";
 
 const LandingStack = createStackNavigator(
@@ -24,9 +27,32 @@ const LandingStack = createStackNavigator(
   }
 );
 
+const MainStack = createStackNavigator({
+    Dashboard: {
+      screen: DashboardScreen
+    }
+  },
+  {
+    defaultNavigationOptions: {
+      title: 'Dashboard',
+      header: props => <MainHeader {...props} />,
+    },
+    initialRouteName: 'Dashboard',
+    headerStyle: {
+      backgroundColor: "transparent"
+    },
+    headerTitleStyle: {
+      fontWeight: "bold",
+      color: "#fff",
+    },
+    headerTintColor: "#fff",
+    animationEnabled: true
+  })
+
 const AppContainer = createAppContainer(createSwitchNavigator(
   {
     Landing: LandingStack,
+    Main: MainStack
   },
   {
     initialRouteName: 'Landing',

@@ -4,12 +4,8 @@ import MainHeader from './MainHeader'
 
 import s from "./../styles";
 
-
 class DashboardScreen extends Component {
-  static navigationOptions = {
-    title: 'Dashboard',
-    header: props => (<MainHeader {...props} />)
-  }
+
   render() {
     return (
       <View style={[s.container, s.bg_whiteWash]}>
