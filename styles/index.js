@@ -52,10 +52,16 @@ NativeTachyons.build({
           overflow: "hidden"
         },
         shadow: {
-          shadowOpacity: 0.80,
+          shadowOpacity: 0.50,
           shadowRadius: 18,
           shadowColor: 'black',
           shadowOffset: { height: 5, width: 5 }
+        },
+        shadow2: {
+          shadowOpacity: 0.20,
+          shadowRadius: 17,
+          shadowColor: 'black',
+          shadowOffset: { height: 0, width: 2 }
         }
       }
 

@@ -51,14 +51,24 @@ const MainStack = createBottomTabNavigator({
   },
   {
   tabBarComponent: ({ navigation }) => {
-      const { routeName } = navigation.state;
+      const { routeName } = navigation.state.routes[navigation.state.index];
       console.log('current route name!', routeName)
       return (
-        <View style={[s.bg_brandGray, s.w100, s.relative, s.h3_5]}>
-          <SafeAreaView style={[s.flx_row, s.h100, s.w100, s.jcsb, s.ph4, s.aic, s.pt2]}>
+        <View style={[s.bg_brandGray, s.w100, s.relative, s.h3_5, s.ph1]}>
+          <SafeAreaView style={[s.flx_row, s.h100, s.w100, s.jcsb, s.ph3, s.aic, s.pt2]}>
             <Text style={[s.bodyText, s.whiteWash, s.f8]}>
               GET SUPPORT
             </Text>
+            <View style={[s.flx_row, s.jcsa, s.aic]}>
+              <Text style={[s.bodyText, s.whiteWash, s.f8, s.ph1]}>
+                MY ORDER
+              </Text>
+              <Image
+                source={require('./images/icons/order_icon.png')}
+                style={[s.w2, s.h2]}
+                resizeMode="contain"
+              />
+            </View>
           </SafeAreaView>
         </View>
       )

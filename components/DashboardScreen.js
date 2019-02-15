@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button, Alert } from 'react-native';
 import StoreListing from './StoreListing'
-
+import OrderDashboardWidget from './OrderDashboardWidget'
 import s from "./../styles";
 
 class DashboardScreen extends Component {
@@ -11,8 +11,9 @@ class DashboardScreen extends Component {
   render() {
     const { validBubble } = this.props.screenProps
     return (
-      <View style={[s.flx_i, s.jcfs, s.w100, s.aifs]}>
+      <View style={[s.flx_i, s.jcfs, s.w100, s.aifs, s.pt3]}>
         <StoreListing validBubble={validBubble} />
+        <OrderDashboardWidget />
       </View>
     );
   }

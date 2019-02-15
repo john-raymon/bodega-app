@@ -11,7 +11,7 @@ class StoreListing extends Component {
   render(){
     const isValidBubble = this.props.validBubble
     return(
-      <View style={[s.flx_i, s.pv4]}>
+      <View style={[ s.pt2, s.ass]}>
         <Text style={[s.bodyTextBold, s.pl4]}>
           STORES NEAR YOU
         </Text>
