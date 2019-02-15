@@ -9,9 +9,10 @@ class DashboardScreen extends Component {
     super(props)
   }
   render() {
+    const { validBubble } = this.props.screenProps
     return (
-      <View style={[s.flx_i,{justifyContent: "flex-start"}, s.bg_brandGray, s.w100, s.aifs]}>
-        <StoreListing />
+      <View style={[s.flx_i, s.jcfs, s.w100, s.aifs]}>
+        <StoreListing validBubble={validBubble} />
       </View>
     );
   }

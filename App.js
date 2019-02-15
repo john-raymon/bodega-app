@@ -9,7 +9,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Image, Button, Alert } from 'react-native';
-import { createSwitchNavigator, createStackNavigator, createAppContainer, SafeAreaView } from "react-navigation";
+import { createSwitchNavigator, createStackNavigator, createBottomTabNavigator, createAppContainer, SafeAreaView } from "react-navigation";
 
 import ClearButton from './components/ClearButton'
 import MainHeader from './components/MainHeader'
@@ -27,14 +27,13 @@ const LandingStack = createStackNavigator(
   }
 );
 
-const MainStack = createStackNavigator({
+const DashboardStack = createStackNavigator({
     Dashboard: DashboardScreen
-  },
-  {
-    defaultNavigationOptions: {
+  },{
+    defaultNavigationOptions: ({navigation}) => ({
       title: 'Dashboard',
-      header: props => <MainHeader {...props} />,
-    },
+      header: props => <MainHeader {...props} />
+    }),
     initialRouteName: 'Dashboard',
     headerStyle: {
       backgroundColor: "transparent"
@@ -44,8 +43,26 @@ const MainStack = createStackNavigator({
       color: "#fff",
     },
     headerTintColor: "#fff",
-    animationEnabled: true
+    animationEnabled: true,
   })
+
+const MainStack = createBottomTabNavigator({
+    Dashboard: DashboardStack
+  },
+  {
+  defaultNavigationOptions: ({ navigation }) => ({
+    tabBarIcon: ({ focused, horizontal, tintColor }) => {
+      const { routeName } = navigation.state;
+      console.log('current route name!', routeName)
+      return <View style={[s.bg_brandGray, s.w100, s.h100]} />
+    }
+  }),
+  tabBarOptions: {
+    showLabel: false,
+    safeAreaInset: { bottom: 'never' }
+  }
+})
+
 
 const AppContainer = createAppContainer(createSwitchNavigator(
   {

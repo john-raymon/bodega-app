@@ -1,11 +1,15 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import NativeTachyons, { styles as s } from "react-native-style-tachyons";
 
+const { width:screenWidth } = Dimensions.get('window');
+
 NativeTachyons.build({
+  rem: screenWidth > 340 ? 16 : 12,
   colors: {
     palette: {
       brandGray: "#2F2F2F",
-      whiteWash: "#F7F7F7"
+      whiteWash: "#F7F7F7",
+      black: "black"
     }
   },
   fonts: {
@@ -26,8 +30,20 @@ NativeTachyons.build({
         h100: {
           height: "100%"
         },
+        max_w5_5: {
+          maxWidth: 300
+        },
+        h5_5: {
+          height: 300
+        },
         f7: {
           fontSize: 12
+        },
+        jcfs: {
+          justifyContent: "flex-start"
+        },
+        overflowHidden: {
+          overflow: "hidden"
         }
       }
 

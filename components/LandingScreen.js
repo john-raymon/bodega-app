@@ -21,7 +21,7 @@ class LandingScreen extends Component {
             <Image
               resizeMode="contain"
               source={require('./../images/bodega_logo_png.png')}
-              style={[s.asc, s.w5, s.pa1]}
+              style={[s.asc, s.w100, s.max_w5_5, s.pa1]}
             />
             <Text style={[s.bodyText, s.whiteWash, s.tc, s.pv1]}>
               DON’T GO WITHOUT
