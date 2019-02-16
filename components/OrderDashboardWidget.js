@@ -32,10 +32,10 @@ class OrderDashboardWidget extends Component {
                 {storeName: 'Jimmy'},
                 {storeName: 'Julie'},
               ]}
-              renderItem={({item}) => <Text style={[s.w100, s.pv2]}>{item.storeName}</Text>}
+              renderItem={({item}) => <Text style={[s.w100, s.pv2, s.ph4]}>{item.storeName}</Text>}
             />
           </View>
-          <View style={[s.w100, s.bg_brandGray, s.asfe, s.pv3, s.jcc]}>
+          <View style={[s.w100, s.bg_brandGray, s.asfe, s.pv3, s.jcc, s.shadow3]}>
             <Text style={[s.bodyTextBold, s.f8, s.whiteWash, s.tc, s.pv2, s.tracked_mega]}>
               CHECKOUT
             </Text>

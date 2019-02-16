@@ -97,6 +97,15 @@ class App extends Component {
       validBubble: false
     }
   }
+  componentDidMount(){
+    navigator.geolocation.getCurrentPosition((location) => {
+      console.log('the location is !!!', location)
+      } , error => console.log(error), {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    })
+  }
   render() {
     return (
       <AppContainer screenProps={this.state}/>

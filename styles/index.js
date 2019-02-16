@@ -55,13 +55,19 @@ NativeTachyons.build({
           shadowOpacity: 0.50,
           shadowRadius: 18,
           shadowColor: 'black',
-          shadowOffset: { height: 5, width: 5 }
+          shadowOffset: { height: 0, width: 0 }
         },
         shadow2: {
           shadowOpacity: 0.20,
           shadowRadius: 15,
           shadowColor: 'black',
           shadowOffset: { height: 0, width: 2 }
+        },
+        shadow3: {
+          shadowOpacity: 0.45,
+          shadowRadius: 18,
+          shadowColor: 'black',
+          shadowOffset: { height: -1, width: -1 }
         }
       }
 

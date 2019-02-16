@@ -14,7 +14,9 @@ class DashboardScreen extends Component {
       <ScrollView>
       <View style={[s.flx_i, s.jcfs, s.w100, s.aifs, s.pt2]}>
           <StoreListing validBubble={validBubble} />
-          <OrderDashboardWidget />
+          { validBubble &&
+            (<OrderDashboardWidget />)
+          }
       </View>
       </ScrollView>
     );

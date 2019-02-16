@@ -12,7 +12,7 @@ class StoreListing extends Component {
     const isValidBubble = this.props.validBubble
     return(
       <View style={[ s.pt2, s.ass]}>
-        <Text style={[s.bodyTextBold, s.pl4]}>
+        <Text style={[s.bodyTextBold, s.pl4, s.f8]}>
           STORES NEAR YOU
         </Text>
         <View style={[s.w100, s.pl4]}>
@@ -21,7 +21,7 @@ class StoreListing extends Component {
           (
           <View style={s.shadow}>
           <ImageBackground
-            source={require('./../images/stock_photo.jpg')}
+            source={require('./../images/perfect-breakfast-set.jpg')}
             style={[s.br4, s.w5, s.h5, s.jcc, s.aic, s.mv3, s.overflowHidden]} >
               <View style={[s.absolute_fill, s.bg_black, s.o_70]}/>
               <Text style={[s.bodyTextLight, s.whiteWash, s.ph3, s.tl, s.f6]}>
